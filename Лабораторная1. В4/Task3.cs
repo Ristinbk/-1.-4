@@ -15,8 +15,6 @@ namespace Лабораторная1.В4
             string text = "Озябшая оса облетела осот, облизала оставшийся остывший обед, отползла от ограды, отыскала отверстие, отогрелась.";
             Console.WriteLine("Первоначальная строка: {0}", text);
             Console.WriteLine("Результат: {0}\n", GetText(text));
-
-
         }
 
         public static string GetText(string text)
