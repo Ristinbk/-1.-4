@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Лабораторная1.В4
@@ -14,11 +15,17 @@ namespace Лабораторная1.В4
             string text = "Озябшая оса облетела осот, облизала оставшийся остывший обед, отползла от ограды, отыскала отверстие, отогрелась.";
             Console.WriteLine("Первоначальная строка: {0}", text);
             Console.WriteLine("Результат: {0}\n", GetText(text));
+
+
         }
 
         public static string GetText(string text)
         {
-            return text.Replace("о", "оОк");
+            string a = "о";
+            string b = "оОк";
+            Regex regex = new Regex(a);            
+            string result = regex.Replace(text, b);
+            return result;
         }
     }
 }
